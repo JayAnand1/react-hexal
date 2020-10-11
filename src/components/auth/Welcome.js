@@ -5,7 +5,7 @@ export default function Welcome() {
     <section className="section auth">
       <div className="container">
         <h1>Welcome!</h1>
-        <p>You have successfully registered a new account.</p>
+        <p>You have successfully registered a new account. Yahoo</p>
         <p>Please confirm your email</p>
       </div>
     </section>
