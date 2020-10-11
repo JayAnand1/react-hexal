@@ -14,7 +14,7 @@ export default class Products extends Component {
     // add call to AWS API Gateway to fetch products here
     // then set them in state
     try {
-      const res = await axios.get(`${config.api.invokeUrl}/products`);
+      const res = await axios.get(`${config.api.invokeUrl}/guides`);
       const products = res.data;
       this.setState({ products: products });
     } catch (err) {
@@ -38,10 +38,10 @@ export default class Products extends Component {
               <div className="column">
                 <div className="tile is-ancestor">
                   <div className="tile is-4 is-parent  is-vertical">
-                    { 
+                    {
                       this.state.products && this.state.products.length > 0
-                      ? this.state.products.map(product => <Product name={product.productname} id={product.id} key={product.id} />)
-                      : <div className="tile notification is-warning">No products available</div>
+                        ? this.state.products.map(product => <Product name={product.productname} id={product.id} key={product.id} />)
+                        : <div className="tile notification is-warning">No products available</div>
                     }
                   </div>
                 </div>
